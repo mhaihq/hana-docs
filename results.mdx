@@ -1,0 +1,94 @@
+---
+title: "Results"
+description: "Outcomes of the multi-agent patient engagement study — engagement metrics, data quality, clinician assessment, and future directions."
+---
+
+# Results
+
+## Engagement and Feasibility
+
+The shift from static web-based forms to HANA's asynchronous conversational model was associated with improved throughput metrics across all cohorts:
+
+| Metric | Historical Baseline | HANA Pilot | Change |
+|--------|-------------------|------------|--------|
+| Session Completion Rate | 68.3% | **84.1%** | +15.8 pts |
+| Median Time-to-Complete | 54.2 hours | **14.5 hours** | **-73.2%** |
+| Admin Follow-up Required | 38.0% | **12.4%** | -25.6 pts |
+| Incomplete/Fragmented Data | 22.1% | **6.8%** | -15.3 pts |
+
+<Note>
+  The reduction in "Admin Follow-up Required" refers to cases where clinical staff had to manually contact patients to clarify intake answers prior to the first appointment.
+</Note>
+
+## Data Richness and Semantic Density
+
+A key objective was increasing the narrative depth of pre-visit data:
+
+| Metric | Baseline | HANA | Improvement |
+|--------|----------|------|-------------|
+| Average words per intake | 45 ± 12 | **315 ± 84** | **+7x** |
+| SDOH markers captured per patient | 0.4 | **3.2** | **+8x** |
+
+This increase in data density suggests patients are more likely to disclose sensitive environmental factors (housing instability, loneliness, substance use) in a conversational flow than in rigid "Comments" boxes.
+
+## Clinician Utility Assessment
+
+The clinical panel reviewed 100 anonymized outputs on a 5-point Likert scale:
+
+| Assessment | Baseline Score | HANA Score |
+|------------|---------------|------------|
+| Utility Rating | 3.2/5.0 (SD 0.8) | **4.1/5.0** (SD 0.6) |
+| Comprehensiveness Preference | — | **93% preferred HANA** |
+| Reduced Pre-Session Prep Time | — | **82% reported improvement** |
+
+### Qualitative Findings
+
+- 82% of evaluators reported that AI summaries reduced pre-session preparation time
+- A minority (12%) noted that increased verbosity required additional reading time — highlighting a trade-off between comprehensiveness and information overload
+
+## Interpretation
+
+The improved completion rates and richer data captured are consistent with the hypothesis that interactive, conversational intake addresses limitations of static digital forms. However, the sequential design prevents causal attribution:
+
+- Phase 2 patients had already been exposed to the care system
+- Patients may have developed rapport with the clinical team
+- Second contact may independently improve engagement regardless of modality
+
+The strong clinician preference likely reflects genuine differences in information richness but may also be influenced by the non-blinded evaluation design.
+
+## Key Contributions
+
+1. **Engagement improvement** — The conversational modality addressed user attrition and data fragmentation, achieving 84.1% completion vs. 68.3% baseline
+2. **Narrative richness** — 7x increase in response length and 8x increase in SDOH marker capture
+3. **Clinical utility** — 93% clinician preference for HANA-generated reports
+4. **Cross-cultural validation** — Results replicated across 4 clinical settings, 3 regions, and multiple patient populations
+
+## Future Research Directions
+
+| Area | Focus |
+|------|-------|
+| **Longitudinal impact** | Whether engagement improvements translate to sustained medication adherence and improved biomarkers (HbA1c, blood pressure) over extended periods |
+| **Enhanced safety** | "Tiered agentic oversight" where a secondary safety model audits clinical outputs before presentation |
+| **EHR interoperability** | Deeper integration via HL7 FHIR to trigger workflows, schedule follow-ups, and draft orders |
+| **Equity and access** | Performance through lower-technology channels (voice-only telephony) for populations without smartphones |
+| **Algorithmic fairness** | Ongoing auditing to minimize biases related to race, gender, language, or socioeconomic status |
+
+## Limitations and Transparency
+
+<Warning>
+  This analysis was conducted internally by the implementing organization. While methodology was designed to minimize bias, internal studies carry inherent risk of conflict of interest. These findings should be interpreted as hypothesis-generating rather than definitive. Independent prospective studies with appropriate ethical oversight are needed to validate these observations.
+</Warning>
+
+**Key limitations:**
+- Non-randomized, sequential design
+- No independent control group
+- Non-blinded clinical evaluation
+- Internal analysis by implementing organization
+- Exclusion of patients without smartphone access
+- Single time point (long-term outcomes not assessed)
+
+## Call for Independent Research
+
+To establish external validity and reproducibility, HANA is planning an independent clinical trial and invites academic research groups and healthcare institutions interested in collaboration.
+
+**Contact:** clinical@usehana.com

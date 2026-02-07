@@ -1,0 +1,100 @@
+---
+title: "Methodology"
+description: "Study design, cohort selection, clinical implementation contexts, and evaluation framework for the multi-agent patient engagement study."
+---
+
+# Methodology
+
+## Study Classification
+
+This work constitutes a **quality improvement (QI) analysis** of operational data collected during routine clinical onboarding:
+
+- **Retrospective design** — data analyzed after collection during standard workflows
+- **Non-randomized** — all patients experienced both phases sequentially
+- **Internal evaluation** — analysis conducted by the implementing organization
+
+## Evaluation Phases
+
+### Phase 1: Baseline Static Data Collection
+
+Patients received a comprehensive digital intake form through the EHR system (PracticeQ) with standardized automated reminders.
+
+**Data captured:** Time spent on intake, completion rates, drop-off points.
+
+### Phase 2: Dynamic Multi-Agent Conversational Intake (HANA)
+
+Approximately one week after Phase 1, patients transitioned to HANA's omnichannel conversational system (SMS, WhatsApp, voice-AI).
+
+The multi-agent architecture:
+- **Data Science Agent** analyzes Phase 1 intake to identify missing data
+- **Health Coach Agent** uses DS Agent outputs to guide conversation while minimizing redundancy
+- **Reasoning Engine** determines contextually relevant follow-up prompts
+
+## Cohort Selection
+
+**N = 1,012 patients** from four clinical sites selected to represent diverse healthcare delivery models:
+
+| Region | Setting | n | Primary Indication |
+|--------|---------|---|-------------------|
+| North America | Private Outpatient Network | 415 | Bipolar Spectrum & Mood Disorders |
+| Western Europe | Public Health Service | 214 | GAD, MDD, Adjustment Disorders |
+| Eastern Europe | NGO/Humanitarian Aid | 198 | PTSD & Acute Stress Reactions |
+| Western Europe | Geriatric Community Care | 185 | Depression & Social Isolation |
+
+Of 1,150 patients initially invited, 1,012 (88%) completed the process and met inclusion criteria.
+
+## Clinical Implementation Contexts
+
+Sites were selected to stress-test the system across:
+
+- **Specialized Mood Disorder Network (North America):** Complex, episode-specific longitudinal data capture
+- **Trauma Response Initiative (Eastern Europe):** Sensitive history-gathering under conditions of high user distress
+- **Geriatric Community Care (Western Europe):** Interface accessibility and digital literacy among non-native digital users (age 65+)
+- **Public Health Waitlist Management (Western Europe):** Scalability and throughput for common presentations
+
+## Clinical Expert Panel
+
+Validation by 20 credentialed clinicians (psychiatrists and licensed psychologists):
+
+| Panel | n | Focus |
+|-------|---|-------|
+| Mood Specialist | 8 | Complex mood disorder intakes |
+| Geriatric Specialist | 6 | Cognitive and emotional needs of older adults |
+| Trauma-Informed | 6 | Acute stress and PTSD responses |
+
+## Evaluation Metrics
+
+### Engagement Metrics
+- Interaction counts (turn-based engagement depth)
+- Attrition/abandonment rate comparison
+- Response latency (time from contact to completion)
+
+### Information Quality
+- Data completeness (% of required clinical data points captured)
+- Narrative richness (word count and entity extraction rates)
+- Gap resolution (Phase 1 gaps addressed in Phase 2)
+
+### Clinical Review
+- **Comprehensiveness** — coverage of clinical, social, and lifestyle factors
+- **Clinical significance** — identification of clinically meaningful information
+- **Perceived usefulness** — 1–5 Likert scale for pre-session preparation utility
+
+## Data Governance
+
+- **Data sovereignty:** Region-locked cloud infrastructure; no cross-border transfer
+- **De-identification:** Cryptographic hashing prior to analysis
+- **Consent:** Standard service-level agreements and general consent for care coordination
+- **Encryption:** End-to-end encrypted messaging channels and HIPAA-compliant SMS gateways
+- **Risk management:** NLP classifiers monitoring for acute risk with immediate fail-safe protocols
+
+## Acknowledged Limitations
+
+- Non-blinded evaluation design (reviewers aware of study objectives)
+- Reviewers not independent of clinical sites
+- Sequential design prevents causal attribution
+- Internal analysis by implementing organization
+- Exclusion of patients without smartphone access
+
+<Card title="See the Results →" icon="arrow-right" href="/research/results">
+  Full outcomes data, clinician assessment, and interpretation.
+</Card>

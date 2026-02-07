@@ -1,0 +1,118 @@
+---
+title: "FAQ"
+description: "Frequently asked questions about HANA's platform, deployment, safety, and competitive positioning."
+---
+
+# Frequently Asked Questions
+
+## Platform & Capabilities
+
+<AccordionGroup>
+  <Accordion title="What is HANA?">
+    HANA is a healthcare-first agent platform for patient communications. It combines voice and messaging workflows, integration into clinical systems (EHR/CRM/ops tooling), and operational outputs (flags, tasks, summaries) so care teams can act on what happened in conversations.
+  </Accordion>
+
+  <Accordion title="What does HANA do concretely?">
+    HANA can run protocol-driven patient calls (pre-op, post-op, exam prep, follow-ups), start with SMS then schedule calls at patient-chosen times, use your documents (PDF/Docs/KB) as the source of truth, produce structured outputs after calls (tasks, flags, summaries, transcripts), and feed results back into your stack via API or provide a white-label dashboard.
+  </Accordion>
+
+  <Accordion title="What makes HANA different from other AI voice solutions?">
+    Four things: (1) Healthcare-grade safety guardrails with dedicated risk monitoring and clinic-defined escalation protocols. (2) Patient engagement personalization that learns how each patient prefers to interact and adapts over time. (3) Operational tooling — tasks, flags, summaries, and auditability are part of the product. (4) Flexible deployment including region-based infrastructure and on-premise options.
+  </Accordion>
+
+  <Accordion title="Why use HANA instead of ElevenLabs?">
+    If you only need a simple voice agent with a script, ElevenLabs may be enough. Use HANA when you need multi-step workflows with repeated touchpoints, EHR/CRM integration and operational tasking, healthcare-specific safety guardrails and protocol execution, and personalization and engagement over time. ElevenLabs is strong on voice. HANA is built around healthcare workflows, safety, and operations.
+  </Accordion>
+
+  <Accordion title="Why use HANA instead of VAPI or Retell?">
+    VAPI and Retell are great general voice infrastructure. HANA differs by being healthcare-first in workflows and edge cases, designed for clinical protocols and operational follow-up, and focused on engagement and safety guardrails that matter in healthcare environments.
+  </Accordion>
+
+  <Accordion title="If we already use Genesys, do we still need HANA?">
+    It depends. If Genesys is your orchestrator (channels, routing, handoff), HANA plugs in as a healthcare-specialized intelligence and workflow layer (protocol execution, tasking, guardrails, engagement). If your workflows are simple and Genesys covers everything, HANA may be less critical.
+  </Accordion>
+</AccordionGroup>
+
+## Deployment & Integration
+
+<AccordionGroup>
+  <Accordion title="What EHR systems does HANA integrate with?">
+    HANA has direct integrations with Charma, PracticeQ, and Athena Health (via Redox). Through connectors like Redox and Catagon, HANA can integrate with 150+ EHR systems. For clinics without an EHR, HANA provides a standalone agent control dashboard.
+  </Accordion>
+
+  <Accordion title="How long does integration take?">
+    Modern cloud EHRs: 2–4 weeks. Via Redox/Catagon connectors: 3–5 weeks. Custom/legacy EHR: 6–12 weeks. No EHR (standalone dashboard): 1–2 weeks.
+  </Accordion>
+
+  <Accordion title="Can we choose the voice and tune how it sounds?">
+    Yes. Voice selection and tuning are part of implementation — including voice choice, language coverage, speed, expressiveness, tone, and conversational style. Some clinics intentionally choose a slightly less hyper-realistic voice so it's clear the caller is an AI.
+  </Accordion>
+
+  <Accordion title="How does the feedback loop work?">
+    You send a brief or protocol. HANA builds an agent draft. You test calls in a demo environment. You leave feedback on what sounded right or wrong. HANA iterates quickly on voice settings, prompts, and flow behavior. Agents can be rebuilt in a single day.
+  </Accordion>
+
+  <Accordion title="What do you need from us to scope a pilot?">
+    Target use case and protocol (PDF/Doc), channel requirements (voice, SMS, WhatsApp), integration points (EHR, CRM, scheduling), language requirements, compliance constraints (data residency, governance), and what success looks like (KPIs).
+  </Accordion>
+</AccordionGroup>
+
+## Safety & Compliance
+
+<AccordionGroup>
+  <Accordion title="How does HANA handle high-risk statements (self-harm, etc.)?">
+    HANA uses dedicated NLP classifiers that monitor conversations for risk signals and execute the clinic's defined protocol (interrupt, escalate, route). HANA is not a crisis hotline — it detects and routes appropriately based on agreed procedures.
+  </Accordion>
+
+  <Accordion title="Is this 'emotion detection'?">
+    HANA analyzes voice signals (prosody, tone, baseline shifts) for healthcare safety and engagement purposes — such as noticing inconsistencies between what someone says and how they sound, or changes from a personal baseline over time. In EU jurisdictions, anything resembling emotion inference may require careful governance handling.
+  </Accordion>
+
+  <Accordion title="Is HANA HIPAA and GDPR compliant?">
+    Yes. In the US, HANA uses HIPAA-compliant channels with BAAs executed for all clinical partners. In the EU, data is processed within region-locked infrastructure with no cross-border transfers. All data is encrypted with AES-256 at rest and in transit.
+  </Accordion>
+
+  <Accordion title="Does HANA use OpenAI or other third-party APIs?">
+    No. HANA runs open-source models on its own servers. No patient data is processed through OpenAI, Anthropic, or other third-party foundation model APIs. This ensures full data sovereignty and regulatory compliance.
+  </Accordion>
+</AccordionGroup>
+
+## Clinical Use
+
+<AccordionGroup>
+  <Accordion title="What use cases are good starting points?">
+    Exam preparation calls (patients forget prep steps), pre-op/post-op protocol follow-ups, and adherence checks that create tasks when something is missing or risky. These are typically easier to scope and validate quickly.
+  </Accordion>
+
+  <Accordion title="What use cases are more sensitive in the EU?">
+    Use cases that can affect access to care — like payments, coverage, or eligibility — can fall into higher regulatory scrutiny in Europe. For these, stronger governance and readiness are needed before live patient testing.
+  </Accordion>
+
+  <Accordion title="What operational outputs do teams get after calls?">
+    Depending on setup: task list (what needs follow-up), call summary and why tasks were created, flagged issues, transcript with optional audio playback, and patient-level history of calls, tasks, and outcomes.
+  </Accordion>
+
+  <Accordion title="What is 'patient engagement personalization'?">
+    HANA learns patterns for each patient: whether they respond better to voice vs. text, the best time and cadence, how complex the language should be, and preferred interaction style. This is especially valuable for patients with repeated touchpoints over months.
+  </Accordion>
+
+  <Accordion title="When is HANA NOT the best choice?">
+    HANA may be overkill if you only need a single simple call flow, don't need operational tasking/flagging, aren't in healthcare, or your existing infrastructure already covers all requirements.
+  </Accordion>
+</AccordionGroup>
+
+## Business & Pricing
+
+<AccordionGroup>
+  <Accordion title="How is HANA priced?">
+    $3–4 Per-Patient-Per-Month (PMPM) with a platform fee plus usage model. Pilots start at €5K for 100 patients / 30 days with outcome-based guarantees.
+  </Accordion>
+
+  <Accordion title="What ROI can we expect?">
+    HANA has demonstrated 31:1 ROI for clinical partners. Typical first-year ROI ranges from 15–30x depending on use case and patient volume.
+  </Accordion>
+
+  <Accordion title="How long is a typical pilot?">
+    30 days of active patient engagement, with 2–3 weeks of pre-launch discovery, integration, and testing. Total time from first conversation to live patients: approximately 6–8 weeks.
+  </Accordion>
+</AccordionGroup>
