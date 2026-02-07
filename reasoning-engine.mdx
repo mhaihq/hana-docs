@@ -1,0 +1,100 @@
+---
+title: "Reasoning Engine"
+description: "HANA's adaptive reasoning engine determines the right question, at the right time, through the right channel — for every patient."
+---
+
+# The Reasoning Engine
+
+HANA's core differentiator is not voice quality or chatbot capability — it's the **reasoning engine** that sits behind every patient interaction. While competitors build voice AI for transactions (booking, routing, FAQs), HANA builds engagement infrastructure for **relationships** — continuous care that adapts over time.
+
+## Why Reasoning Matters
+
+Consider the difference between a reminder and a conversation:
+
+| Approach | Example | Outcome |
+|----------|---------|---------|
+| **Generic reminder** | "Did you take your medication? Y/N" | Patient ignores it (like every other automated message) |
+| **Contextual conversation** | "Last time we spoke, you mentioned the new medication was making you drowsy. How has that been this week?" | Patient engages — because the question is relevant, personal, and shows continuity |
+
+The reasoning engine makes the second approach possible at scale.
+
+## How It Works
+
+### Pre-Call Reasoning
+
+Before each patient interaction, the reasoning engine performs a multi-step analysis:
+
+<Steps>
+  <Step title="Data Integration">
+    Pull all available data: EHR chart, past HANA conversations, wearable data, lab results, medication list, and any outstanding tasks or flags.
+  </Step>
+  <Step title="Gap Analysis">
+    Identify what information is missing, outdated, or needs follow-up. The Data Science Agent ensures no redundant questions are asked.
+  </Step>
+  <Step title="Protocol Matching">
+    Match the patient's current status to the clinic's defined clinical protocols. Determine which assessments, check-ins, or follow-ups are due.
+  </Step>
+  <Step title="Personalization">
+    Factor in the patient's communication preferences: Do they respond better to voice or text? What time of day? How complex should the language be? What's their cultural context?
+  </Step>
+  <Step title="Question Generation">
+    Produce a prioritized set of questions and conversation objectives, then hand them to the conversational agent for delivery.
+  </Step>
+</Steps>
+
+### Adaptive Engagement Logic
+
+The reasoning engine continuously adapts based on patient behavior:
+
+**Frequency adaptation** — If a patient is consistently adherent, the system may reduce check-in frequency. If adherence drops, frequency increases automatically.
+
+**Channel optimization** — The engine learns which channel works best for each patient. Some patients respond to voice; others prefer SMS. Some prefer morning; others evening.
+
+**Complexity calibration** — Language complexity adjusts based on the patient's demonstrated comprehension level and communication style.
+
+**Escalation intelligence** — The engine recognizes patterns that warrant clinical intervention and routes appropriately based on the clinic's defined escalation protocols.
+
+## Memory Layer
+
+HANA maintains a persistent **memory layer** for each patient that grows over time:
+
+| Memory Type | What It Captures |
+|-------------|------------------|
+| **Interaction History** | Every conversation, response, and outcome |
+| **Behavioral Patterns** | Preferred channels, response times, engagement trends |
+| **Clinical Context** | Reported symptoms, barriers, side effects, social determinants |
+| **Relationship State** | Trust level, engagement trajectory, communication preferences |
+
+This memory creates continuity between interactions — something no static form or one-off reminder can achieve.
+
+<Note>
+  This is analogous to how a human clinician builds rapport: you know that your grandfather needs a phone call (he won't read a text), but your 14-year-old daughter needs a text first (she'll never answer a call). HANA learns these patterns for every patient.
+</Note>
+
+## Clinical Protocol Execution
+
+Clinics have spent years building clinical protocols that work. The problem isn't the protocols — it's delivering them consistently at scale.
+
+HANA's reasoning engine takes existing protocols (provided as PDFs, documents, or structured knowledge bases) and delivers them through conversation:
+
+- **Standardized assessments** (PHQ-9, GAD-7, DIVA for ADHD) delivered conversationally rather than as static forms
+- **Care pathway management** following clinic-defined branching logic
+- **Medication monitoring** with adaptive follow-up based on reported adherence
+- **Risk screening** with real-time escalation to clinical staff
+
+The protocols don't change. The delivery mechanism does — from paper forms and manual phone calls to intelligent, adaptive conversations.
+
+## Comparison to Generic AI
+
+| Dimension | Generic LLM / Voice Agent | HANA Reasoning Engine |
+|-----------|---------------------------|----------------------|
+| **Conversation logic** | Generic prompting | Pre-computed reasoning based on full patient context |
+| **Adaptation** | Static protocol | Learns patient preferences over time |
+| **Clinical knowledge** | General medical training data | 1M+ proprietary patient interaction dataset |
+| **Latency optimization** | Real-time processing only | Pre-processing separates reasoning from delivery |
+| **Safety** | Prompt-based guardrails | Dedicated safety classifiers + clinic-defined escalation |
+| **Memory** | Conversation-level context | Persistent, longitudinal patient memory |
+
+<Info>
+  The reasoning engine is what makes HANA infrastructure rather than an application. Applications do one thing. Infrastructure powers whatever the clinic needs.
+</Info>

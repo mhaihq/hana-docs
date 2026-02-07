@@ -1,0 +1,121 @@
+---
+title: "Features"
+description: "Core capabilities of the HANA platform — from multi-channel engagement to structured clinical outputs."
+---
+
+# Features
+
+## Multi-Channel Patient Communication
+
+HANA meets patients where they are, supporting multiple communication channels:
+
+| Channel | Use Case | Compliance |
+|---------|----------|------------|
+| **SMS** | Quick confirmations, scheduling, reminders | HIPAA-compliant |
+| **Voice Calls** | Complex history-taking, detailed check-ins, assessments | HIPAA-compliant |
+| **WhatsApp** | International patient populations, high-engagement markets | GDPR-compliant |
+| **Telegram** | Eastern European and emerging market populations | GDPR-compliant |
+| **iMessage** | US patient populations with Apple devices | HIPAA-compliant |
+
+The reasoning engine determines the optimal channel for each patient based on their demonstrated preferences and response patterns.
+
+## Voice AI Capabilities
+
+- **Natural, conversational dialogue** — not robotic scripted responses
+- **Multi-language support** — 3+ languages with proprietary healthcare-specific datasets
+- **Configurable voice selection** — tone, speed, expressiveness, and style tunable per clinic
+- **Adaptive branching** — conversations follow clinical protocols with dynamic follow-up based on patient responses
+- **Transparency option** — some clinics intentionally choose a slightly less hyper-realistic voice so patients know they're speaking with AI
+
+## Knowledge Base Integration (RAG)
+
+Clinics provide their own content as the source of truth:
+
+- PDFs of clinical protocols and guidelines
+- Google Docs and text-based procedures
+- Structured knowledge bases
+
+HANA parses and indexes this content so agents retrieve the right information during conversations and stay aligned with approved clinical guidance.
+
+<Tip>
+  Text-based sources work best. Avoid image-only scans where possible for optimal parsing.
+</Tip>
+
+## Structured Operational Outputs
+
+After every patient interaction, HANA produces actionable outputs:
+
+<CardGroup cols={2}>
+  <Card title="Task Lists" icon="list-check">
+    What needs follow-up, with priority level and clinical context for why the task was created.
+  </Card>
+  <Card title="Call Summaries" icon="file-lines">
+    Synthesized narrative summaries of what was discussed, what the patient reported, and what changed.
+  </Card>
+  <Card title="Flagged Issues" icon="flag">
+    Risk signals, adherence concerns, and escalation triggers surfaced proactively for clinical review.
+  </Card>
+  <Card title="Transcripts & Audio" icon="microphone">
+    Full conversation records with optional audio playback for audit and clinical reference.
+  </Card>
+</CardGroup>
+
+## Agent Control Dashboard
+
+For clinics that don't have an EHR or need a standalone view, HANA provides a **white-label dashboard** for managing agents:
+
+- View all active patient conversations
+- Review tasks, flags, and summaries
+- Configure agent behavior and protocols
+- Monitor engagement metrics in real-time
+- Manage escalation workflows
+
+## Feedback and Improvement Loop
+
+HANA's implementation follows a rapid iteration cycle:
+
+<Steps>
+  <Step title="Brief / Protocol">
+    Clinic provides the care protocol, workflow documentation, or simply describes their process on a call.
+  </Step>
+  <Step title="Agent Draft">
+    HANA builds an agent draft — typically mapping the workflow in Figma and configuring 2–3 test agents within 1–2 days.
+  </Step>
+  <Step title="Test Environment">
+    Clinic tests calls in a demo environment, interacting with agents as patients would.
+  </Step>
+  <Step title="Feedback">
+    Clinic provides feedback on conversation flow, tone, protocol accuracy, and patient experience.
+  </Step>
+  <Step title="Iteration">
+    HANA iterates on voice settings, prompts, and flow behavior. Agents can be rebuilt in a single day.
+  </Step>
+</Steps>
+
+## Patient Engagement Personalization
+
+HANA learns patterns for each patient over time:
+
+| Personalization Dimension | What HANA Learns |
+|--------------------------|------------------|
+| **Channel preference** | Voice vs. text vs. WhatsApp |
+| **Optimal timing** | Best time and day of week for engagement |
+| **Language complexity** | Simple vs. technical communication style |
+| **Interaction style** | Short/direct vs. conversational |
+| **Response cadence** | How quickly the patient typically responds |
+| **Cultural context** | Language, cultural norms, communication expectations |
+
+This is especially valuable for patients with repeated touchpoints over months — chronic care, behavioral health, rehabilitation, and palliative care.
+
+## When HANA Is Not the Best Choice
+
+HANA may be more than you need if:
+
+- You only need a single, simple call flow with no follow-up
+- You don't need operational tasking or flagging
+- You're not in healthcare (and don't need healthcare-grade guardrails)
+- Your existing infrastructure (e.g., Genesys + a voice provider) already covers all requirements
+
+<Info>
+  HANA is purpose-built for **continuous patient engagement between clinical encounters**. For pure call handling or front-desk automation, other solutions may be more appropriate.
+</Info>

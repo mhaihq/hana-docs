@@ -1,0 +1,97 @@
+---
+title: "Safety & Compliance"
+description: "Healthcare-grade safety guardrails, regulatory compliance, and human-in-the-loop architecture."
+---
+
+# Safety & Compliance
+
+HANA is built with clinical safety as a core architectural feature — not an afterthought bolted onto a general-purpose AI system. The platform has managed over **1 million patient interactions with zero critical adverse events**.
+
+## Safety Architecture
+
+### Human-in-the-Loop Design
+
+HANA operates with a "Human-in-the-Loop" safety architecture at every level:
+
+- **NLP classifiers** actively monitor all conversations for semantic markers of acute risk (self-harm, suicidality, medical emergency)
+- **Detection triggers immediate fail-safe protocols** — suspending the AI workflow and routing the case to on-call clinical staff
+- **Every clinical output** is expressly intended to complement, not replace, the final assessment of the consulting clinician
+
+### Clinic-Defined Escalation Protocols
+
+HANA does not impose a one-size-fits-all safety protocol. Instead, escalation procedures are defined collaboratively with each clinic during implementation:
+
+| Scenario | Example Clinic Response A | Example Clinic Response B |
+|----------|--------------------------|--------------------------|
+| Suicidality detected | Interrupt call, direct patient to emergency services | Interrupt call + send SMS to on-call clinician + connect to 24/7 support line |
+| Medication crisis | Flag for next-day clinical review | Immediate escalation to prescribing physician |
+| Missed critical appointments | Automated re-engagement sequence | Alert care coordinator for manual outreach |
+
+<Warning>
+  HANA is not a crisis hotline. It does not counsel patients in emergencies. The system is built to **detect and route appropriately** based on each clinic's agreed procedures.
+</Warning>
+
+### Tiered Safety Monitoring
+
+| Layer | Function |
+|-------|----------|
+| **Real-time NLP classifiers** | Monitor every utterance for risk markers during conversation |
+| **Post-call safety audit** | Secondary review of completed conversations for missed signals |
+| **Interaction scoring** | Every interaction scored for safety, relevance, and clinical accuracy |
+| **Clinical review queue** | Flagged interactions surfaced for human clinician review |
+
+## Regulatory Compliance
+
+### HIPAA (United States)
+
+- All patient-facing communications use **HIPAA-compliant channels**
+- SMS communications through secure, compliant gateways
+- **Business Associate Agreement (BAA)** executed with all clinical partners
+- Full audit trail for every patient interaction
+
+### GDPR (European Union)
+
+- **Data sovereignty** — patient data processed within region-locked EU infrastructure
+- Cross-border data transfer strictly prohibited
+- GDPR-compliant consent and data handling procedures
+- Right to erasure and data portability supported
+
+### Data Security
+
+| Measure | Implementation |
+|---------|---------------|
+| **Encryption at rest** | AES-256 |
+| **Encryption in transit** | TLS 1.3 |
+| **Data residency** | Region-locked cloud infrastructure (EU for EU, US for US) |
+| **Anonymization** | Cryptographic hashing for research and analysis datasets |
+| **Access controls** | Role-based access with audit logging |
+
+### Country-Specific Compliance
+
+HANA ensures compliance with local regulations across all operating jurisdictions. The platform currently operates in compliance with regulatory frameworks in:
+
+- United States (HIPAA)
+- European Union (GDPR)
+- United Kingdom (UK GDPR)
+- Ireland (HSE data governance standards)
+- Italy (regional health data regulations)
+
+## On-Premise Deployment
+
+For organizations with the strictest data residency requirements:
+
+- Full HANA platform installed on the organization's own servers
+- **Zero external data transmission** — all processing happens within the facility
+- Licensing-based model
+- Currently deployed/testing with hospital systems in Italy and Middle East sovereign cloud environments
+
+## Consent and Transparency
+
+- Patients are informed they are interacting with an AI system
+- Explicit consent obtained for clinical care and service improvement during standard intake procedures
+- Some clinics choose voice settings that make the AI nature of the interaction clearly apparent
+- Full audit trail available for regulatory review
+
+<Info>
+  HANA's safety architecture is not "just a prompt." It's a dedicated, multi-layer system designed for the reality that healthcare conversations can surface life-threatening situations — and the response must be immediate, appropriate, and clinic-defined.
+</Info>
